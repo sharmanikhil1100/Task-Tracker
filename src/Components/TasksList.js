@@ -8,7 +8,7 @@ const TasksList = ({headerTitle}) => {
     
     function addTask({title, description}) {
         let tasksList = document.getElementById("tasksInList"+headerTitle)
-        let nodeElement = document.createElement("span")
+        let nodeElement = document.createElement("div")
         let task = <TaskBox title={title} description={description} headerTitle={headerTitle} taskCount={taskCount}/>
         
         nodeElement.setAttribute("id", "taskNo"+headerTitle+taskCount)
@@ -28,7 +28,7 @@ const TasksList = ({headerTitle}) => {
                 {headerTitle}
             </div>
             <div id={"tasksInList"+headerTitle}>
-                <TaskBox title="Task1" description="Some text here" headerTitle={headerTitle} taskCount={taskCount}/>
+                <TaskBox title="Task1" description="Some text here" headerTitle={headerTitle} taskCount={taskCount++}/>
             </div>
             <Button icon onClick={() => addTask({title:"<Title>", description:"Add some text here"})}> 
                 <Icon name='add' aria-hidden='false' size='small'/>
