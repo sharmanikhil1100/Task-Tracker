@@ -1,38 +1,26 @@
-.App {
-  text-align: center;
+.taskBoxElement {
+  padding: 5px 5px;
+  border: 1px solid black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.taskRow {
+  margin: 0 5px 0 5px;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.taskBox {
+  border: 1px solid black;
+  background-color: rgb(230, 230, 230);
+  width: 40em;
+  padding: 5px 5px;
+  margin: 0px 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.tasksList {
+  width: 40em;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.listHeader {
+  min-height: 30px;
+  background-color: grey;
 }

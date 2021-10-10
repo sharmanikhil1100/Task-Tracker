@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import TasksList from './Components/TasksList';
+import { Grid, Button, Icon } from 'semantic-ui-react'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Grid>
+      <Grid.Row>
+        <Grid.Column width={8}>
+          <TasksList headerTitle="To Do"/>
+          <TasksList headerTitle="Doing"/>
+        </Grid.Column>
+        <Grid.Column width={8}>
+          <TasksList headerTitle="Done"/>
+          <TasksList headerTitle="Do Later"/>
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>
+    </>
   );
 }
 
